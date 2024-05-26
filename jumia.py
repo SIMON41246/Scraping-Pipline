@@ -1,12 +1,7 @@
-from utils.extract import extract_full_body
-import re
-from selectolax.parser import HTMLParser
-from config.tools import get_config
-from playwright.sync_api import sync_playwright
-from utils.process import extract_image_urls
-from utils.process import save_to_file
 from pymongo import MongoClient
+from selectolax.parser import HTMLParser
 
+from utils.extract import extract_full_body
 
 URL = "https://www.jumia.ma/mlp-new-on-jumia/?page=9#catalog-listing"
 

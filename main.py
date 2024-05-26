@@ -1,11 +1,10 @@
-from utils.extract import extract_full_body
 import re
-from selectolax.parser import HTMLParser
-from config.tools import get_config
-from playwright.sync_api import sync_playwright
-from utils.process import extract_image_urls
-from utils.process import save_to_file
+
 from pymongo import MongoClient
+from selectolax.parser import HTMLParser
+
+from utils.extract import extract_full_body
+
 
 def extract_prices(price_str):
     # Use regex to find all price values in the string
@@ -22,7 +21,6 @@ if __name__ == '__main__':
     db = client["Ebay"]
     collection = db["Products"]
 
-    config = get_config()
 
     html = extract_full_body(URL=URL, wait_for='li[class="s-item s-item--large"]')
     tree = HTMLParser(html)

@@ -1,0 +1,29 @@
+{
+    "url": "https://www.ebay.com/b/Home-Improvement/159907/bn_1851980",
+    "container": {
+        "name": "store_sale_divs",
+        "selector": "div[class=\"container\"]",
+        "match": "all",
+        "type": "node"
+    },
+    "item": [
+        {
+            "name": "title",
+            "selector": "div[class*=\"s-item__info\"] > a > h3",
+            "match": "first",
+            "type": "text"
+        },
+        {
+            "name": "Price",
+            "selector": "div[class=\"s-item__detail s-item__detail--primary\"] > span",
+            "match": "all",
+            "type": "text"
+        },
+        {
+            "name": "Shipping",
+            "selector": "div[class='s-item__detail s-item__detail--primary'] > span",
+            "match": "first",
+            "type": "text"
+        }
+    ]
+}
