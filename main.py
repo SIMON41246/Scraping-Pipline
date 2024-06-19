@@ -1,13 +1,9 @@
 import re
-
 from pymongo import MongoClient
 from selectolax.parser import HTMLParser
-
 from utils.extract import extract_full_body
 
-
 def extract_prices(price_str):
-    # Use regex to find all price values in the string
     prices = re.findall(r"\$([\d,]+\.\d{2})", price_str.replace(',', ''))
     prices = list(map(float, prices))
     if not prices:
